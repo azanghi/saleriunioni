@@ -258,7 +258,7 @@
 
                 <bt:String id="menuItem1ComposeLabel" DefaultValue="Ciao a tutti!" />
                 <bt:String id="menuItem2ComposeLabel" DefaultValue="Rimandiamo la riunione!" />
-                <bt:String id="menuItem3ComposeLabel" DefaultValue="Visita il sito almaviva.it" />
+                <bt:String id="menuItem3ComposeLabel" DefaultValue="Visita il sito almaviva.itg" />
 
                 <!-- Read mode -->
                 <bt:String id="funcReadButtonLabel" DefaultValue="Get subject" />
