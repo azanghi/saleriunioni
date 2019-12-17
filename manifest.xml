@@ -233,13 +233,13 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://demoalmatest.azurewebsites.net/assets/mrm80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://demoalmatest.azurewebsites.net/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://demoalmatest.azurewebsites.net/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://demoalmatest.azurewebsites.net/src/commands/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://demoalmatest.azurewebsites.net/src/taskpane/taskpane.html"/>
 
-                 <bt:Url id="functionFile" DefaultValue="https://demoalmatest.azurewebsites.net/taskpane.html" />
-                <bt:Url id="readTaskPaneUrl" DefaultValue="https://demoalmatest.azurewebsites.net/taskpane.html" />
-                <bt:Url id="composeTaskPaneUrl" DefaultValue="https://demoalmatest.azurewebsites.net/taskpane.html" />
-                <bt:Url id="customPaneUrl" DefaultValue="https://demoalmatest.azurewebsites.net/taskpane.html" />
+                 <bt:Url id="functionFile" DefaultValue="https://demoalmatest.azurewebsites.net/src/taskpane/taskpane.html" />
+                <bt:Url id="readTaskPaneUrl" DefaultValue="https://demoalmatest.azurewebsites.net/src/taskpane/taskpane.html" />
+                <bt:Url id="composeTaskPaneUrl" DefaultValue="https://demoalmatest.azurewebsites.net/src/taskpane/taskpane.html" />
+                <bt:Url id="customPaneUrl" DefaultValue="https://demoalmatest.azurewebsites.net/src/taskpane/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="AlmavivA"/>
