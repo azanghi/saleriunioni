@@ -2,15 +2,15 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>797cc88b-f790-45f3-a761-1b0f3b89067c</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
+  <ProviderName>AlmavivA</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Alma.SalaRiunioni"/>
-  <Description DefaultValue="A template to get started."/>
+  <DisplayName DefaultValue="Prenota sala riunioni"/>
+  <Description DefaultValue="AlmavivA Sala Riunioni è il sistema di prenotazione sale riunioni."/>
   <IconUrl DefaultValue="https://demoalmatest.azurewebsites.net/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://demoalmatest.azurewebsites.net/assets/icon-80.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
-    <AppDomain>contoso.com</AppDomain>
+    <AppDomain>almaviva.it</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>

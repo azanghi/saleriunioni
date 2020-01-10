@@ -78,3 +78,24 @@
 b {
     font-weight: bold;
 }
+
+label
+{
+    color: white;
+}
+.h3
+{
+    color: white;
+}
+
+/* .ms-welcome__main:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(137,186,22,.9);
+    z-index: 1;
+    opacity: 0.5;
+} */
