@@ -59,8 +59,8 @@ function callbackFunction(asyncResult) {
           result +="Email address: " + place.emailAddress;
       }
       document.getElementById('item-location').innerText += result; 
-      oFormObject.elements["tbSala"].value = result;
-      //document.getElementById('tbSala').value = result; 
+      oFormObject.elements["tbSala"].value = "ok2";
+      document.getElementById('tbSala').value = "ok";
   });
 }
 
