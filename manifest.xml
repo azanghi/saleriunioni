@@ -128,21 +128,7 @@
                             <Group id="apptComposeDemoGroup">
                                 <Label resid="GroupLabel" />
                                 <!-- Function (UI-less) button -->
-                                <Control xsi:type="Button" id="apptComposeFunctionButton">
-                                    <Label resid="funcComposeButtonLabel" />
-                                    <Supertip>
-                                        <Title resid="funcComposeSuperTipTitle" />
-                                        <Description resid="funcComposeSuperTipDescription" />
-                                    </Supertip>
-                                    <Icon>
-                                        <bt:Image size="16" resid="Icon.16x16"/>
-                                        <bt:Image size="32" resid="Icon.32x32"/>
-                                        <bt:Image size="80" resid="Icon.80x80"/>
-                                    </Icon>
-                                    <Action xsi:type="ExecuteFunction">
-                                        <FunctionName>addDefaultMsgToBody</FunctionName>
-                                    </Action>
-                                </Control>
+                               
                                 <!-- Menu (dropdown) button -->
                                 <Control xsi:type="Menu" id="apptComposeMenuButton">
                                     <Label resid="menuComposeButtonLabel" />
