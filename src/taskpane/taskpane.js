@@ -51,7 +51,7 @@ function write(message){
 
 function callbackFunction(asyncResult) {
   asyncResult.value.forEach(function (place) {
-    var oFormObject = document.forms['myform_id'];
+    //var oFormObject = document.forms['myform_id'];
     
     var result = "Display name: " + place.displayName;
     result +=" Type: " + place.locationIdentifier.type;
@@ -59,8 +59,9 @@ function callbackFunction(asyncResult) {
           result +="Email address: " + place.emailAddress;
       }
       document.getElementById('item-location').innerText += result; 
-      oFormObject.elements["tbSala"].value = "ok2";
-      document.getElementById('tbSala').value = "ok";
+      
+      //oFormObject.elements["tbSala"].value = "ok2";
+      document.getElementById("tbSala").value = "ok";
   });
 }
 
