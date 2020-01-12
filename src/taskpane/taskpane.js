@@ -17,8 +17,8 @@ export async function run() {
   /**
    * Insert your Outlook code here
    */
-  getSubject();
-  getAllRecipients();
+  //getSubject();
+  //getAllRecipients();
   
   // Get a reference to the current message
 var item = Office.context.mailbox.item;
