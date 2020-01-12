@@ -57,7 +57,7 @@ function callbackFunction(asyncResult) {
           result +="Email address: " + place.emailAddress;
       }
       document.getElementById('item-location').innerText += result; 
-      document.getElementById('tbSala').value += result; 
+      document.getElementById('tbSala').value = result; 
   });
 }
 
