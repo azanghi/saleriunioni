@@ -51,13 +51,16 @@ function write(message){
 
 function callbackFunction(asyncResult) {
   asyncResult.value.forEach(function (place) {
+    var oFormObject = document.forms['myform_id'];
+    
     var result = "Display name: " + place.displayName;
     result +=" Type: " + place.locationIdentifier.type;
       if (place.locationIdentifier.type === Office.MailboxEnums.LocationType.Room) {
           result +="Email address: " + place.emailAddress;
       }
       document.getElementById('item-location').innerText += result; 
-      document.getElementById('tbSala').value = result; 
+      oFormObject.elements["tbSala"].value = result;
+      //document.getElementById('tbSala').value = result; 
   });
 }
 
