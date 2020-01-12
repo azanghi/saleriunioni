@@ -85,7 +85,7 @@ label
 }
 .h3
 {
-    color: white;
+    color: white!important;
 }
 
 /* .ms-welcome__main:before{
