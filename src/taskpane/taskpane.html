@@ -30,60 +30,7 @@
     <p class="h3">Prenota sala riunioni</p>
     <section id="sideload-msg" class="ms-welcome__main">
         <!-- <h2 class="ms-font-xl">Per favore inserisci sala riunione ed ospiti prima di verificare la Disponibilità.</h2> -->
-        <form class="form-horizontal">
-            
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-4 col-lg-12 control-label" for="textinput">Sede</label>  
-              <div class="col-md-4 col-lg-12">
-              <input id="tbSede" name="textinput" type="text" placeholder="sede" class="form-control input-md">
-                
-              </div>
-            </div>
-            
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label col-lg-12" for="textinput">Orario selezionato</label>  
-              <div class="col-md-4 col-lg-12">
-              <input id="txOrario" name="textinput" type="text" placeholder="orario" class="form-control input-md">
-                
-              </div>
-            </div>
-            
-            
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label col-lg-12" for="textinput">Sala riunione selezionata</label>  
-              <div class="col-md-4 col-lg-12">
-              <input id="tbSala" name="textinput" type="text" placeholder="sala" class="form-control input-md">
-                
-              </div>
-            </div>
-            
-            <!-- Select Basic -->
-            <div class="form-group">
-              <label class="col-md-4 control-label col-lg-12" for="selectbasic">Sale disponibili</label>
-              <div class="col-md-4 col-lg-12">
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                  <option value="1">CB G11a</option>
-                  <option value="2">CB G310a</option>
-                </select>
-              </div>
-            </div>
-            
-            <!-- Button -->
-            <div class="form-group">
-              <label class="col-md-4 control-label col-lg-12" for="singlebutton"></label>
-              <div class="col-md-4 col-lg-12">
-                <button id="run3" name="singlebutton" class="btn btn-primary">Verifica</button>
-              </div>
-              <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-                <span class="ms-Button-label">Verifica</span>
-            </div>
-            </div>
-            
-    
-        </form>
+      
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none;">
         <!-- <h2 class="ms-font-xl"> Per favore inserisci sala riunione ed ospiti prima di verificare la Disponibilità. </h2> -->
@@ -92,10 +39,62 @@
         <p><label id="messagePerson"></label></p>
         <div role="button" id="run2" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
             <span class="ms-Button-label">Verifica</span>
-        </div>
+        </div> 
 
-
+        <form class="form-horizontal">
             
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 col-lg-12 control-label" for="textinput">Sede</label>  
+            <div class="col-md-4 col-lg-12">
+            <input id="tbSede" name="textinput" type="text" placeholder="sede" class="form-control input-md">
+              
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label col-lg-12" for="textinput">Orario selezionato</label>  
+            <div class="col-md-4 col-lg-12">
+            <input id="txOrario" name="textinput" type="text" placeholder="orario" class="form-control input-md">
+              
+            </div>
+          </div>
+          
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label col-lg-12" for="textinput">Sala riunione selezionata</label>  
+            <div class="col-md-4 col-lg-12">
+            <input id="tbSala" name="textinput" type="text" placeholder="sala" class="form-control input-md">
+              
+            </div>
+          </div>
+          
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-4 control-label col-lg-12" for="selectbasic">Sale disponibili</label>
+            <div class="col-md-4 col-lg-12">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">CB G11a</option>
+                <option value="2">CB G310a</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label col-lg-12" for="singlebutton"></label>
+            <div class="col-md-4 col-lg-12">
+              <button id="run3" name="singlebutton" class="btn btn-primary">Verifica</button>
+            </div>
+            <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+              <span class="ms-Button-label">Verifica</span>
+          </div>
+          </div>
+          
+  
+      </form>
     </main>
 </body>
 
