@@ -50,9 +50,8 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label col-lg-12" for="textinput">Orario selezionato</label>
                     <div class="col-md-4 col-lg-12">
-                        <input id="txOrario" name="textinput" type="text" placeholder="orario"
+                        <input id="txtOrario" name="txtOrario" type="text" placeholder="Seleziona orario"
                             class="form-control input-md">
-
                     </div>
                 </div>
 
@@ -60,13 +59,13 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label col-lg-12" for="textinput">Sala riunione selezionata</label>
                     <div class="col-md-4 col-lg-12">
-                        <input id="tbSala" name="tbSala" type="text" placeholder="sala" class="form-control input-md">
-
+                        <input id="txtSala" name="txtSala" type="text" placeholder="Seleziona sala riunione"
+                            class="form-control input-md">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-4 control-label col-lg-12" for="selectbasic">Sale disponibili</label>
+                    <label class="col-md-4 control-label col-lg-12" for="selectbasic">Altre sale disponibili</label>
                     <div class="col-md-4 col-lg-12">
                         <select id="selectbasic" name="selectbasic" class="form-control">
                             <option value="1">CB G11a</option>
@@ -75,19 +74,18 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="col-md-4 control-label col-lg-12" for="singlebutton"></label>
                     <div class="col-md-4 col-lg-12">
                         <button id="verificaa" name="verificaa" class="btn btn-primary">Verifica</button>
                     </div>
-                </div>
-
+                </div> -->
 
             </form>
 
             <button id="verifica" name="verifica" class="btn btn-primary">Verifica</button>
-
-            <table class="table">
+            
+            <table id="tableAttendees" hidden class="table">
                 <thead class="table-primary">
                     <tr>
                         <th scope="col">#</th>
@@ -96,7 +94,8 @@
                         <th scope="col">Partecipazione</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="rowsAttendees">
+                    <!-- 
                     <tr>
                         <th scope="row">1</th>
                         <td>Giovanni</td>
@@ -121,6 +120,7 @@
                         <td><img src="/assets/error.png" alt="Example" width="30" height="30"></td>
                         <td>Facoltativo</td>
                     </tr>
+                    -->
                 </tbody>
             </table>
         </section>
@@ -129,7 +129,8 @@
     <script type="text/javascript" src="taskpane.js"></script>
     <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../../node_modules/core-js/client/core.js"></script>
-    <script type="text/javascript" src="../../node_modules/@microsoft/office-js-helpers/dist/office.helpers.js"></script>
+    <script type="text/javascript"
+        src="../../node_modules/@microsoft/office-js-helpers/dist/office.helpers.js"></script>
 </body>
 
 </html>
