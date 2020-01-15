@@ -26,7 +26,12 @@
     "validate": "office-addin-manifest validate manifest.xml",
     "watch": "webpack --mode development --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "popper.js": "^1.14.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/polyfill": "^7.6.0",
@@ -34,8 +39,9 @@
     "@types/office-js": "^1.0.37",
     "@types/office-runtime": "^1.0.8",
     "babel-loader": "^8.0.6",
+    "bootstrap": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.4",
+    "copy-webpack-plugin": "^5.1.1",
     "eslint-config-office-addins": "^1.0.10",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
