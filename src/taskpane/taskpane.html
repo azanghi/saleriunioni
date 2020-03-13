@@ -1,149 +1,136 @@
-<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
-<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Sale Riunioni</title>
 
     <!-- Office JavaScript API -->
-    <!-- <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script> --> 
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
 
     <!-- For more information on Office UI Fabric, visit https://developer.microsoft.com/fabric. -->
-    <!-- <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/> -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css" />
 
-    <!-- Template styles -->
-    <link href="taskpane.css" rel="stylesheet" type="text/css" />
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
-    <script type="module" src="taskpane.js" type="text/javascript"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-<body class="ms-font-m ms-welcome ms-Fabric"">
-  <!-- <body class="ms-font-m ms-welcome ms-Fabric" style="background-image: url('../../assets/background.jpg');"></body> -->
-    <!-- <header class="ms-welcome__header ms-bgColor-neutralLighter">
-        <img width="90" height="90" src="../../assets/header.png" alt="Contoso" title="Contoso" />
-        <h1 class="ms-font-su">Alma Sala Riunioni</h1>
-    </header> -->
-    <!-- <p class="h3">Prenota sala riunioni</p>-->
-    
-    <section id="sideload-msg" class="ms-welcome__main">
-         <!-- <h2 class="ms-font-xl">Per favore inserisci sala riunione ed ospiti prima di verificare la Disponibilità.</h2>  -->
-         <form class="form-horizontal">
+<body class="ms-font-l">
+    <main>
+        <section id="sideload-msg" class="ms-welcome__main">
+            <form class="form-horizontal offset-2 col-8">
+
+                <div class="form-group">
+                    <label class="col-md-4 col-lg-12 control-label" for="textinput">Sede</label>
+                    <div class="col-md-4 col-lg-12">
+                        <select id="tbSede" name="tbSede" class="form-control">
+                            <option value="1">Roma Casal Boccone</option>
+                            <option value="2">Roma Scalo Prenestino</option>
+                            <option value="3">Milano</option>
+                            <option value="4">Torino</option>
+                            <option value="5">Napoli</option>
+                            <option value="6">Genova</option>
+                            <option value="7">Padova</option>
+                            <option value="8">Firenze</option>
+                            <option value="9">Bologna</option>
+                            <option value="10">Castelmaggiore</option>
+                            <option value="11">Trento</option>
+                            <option value="12">Rovereto</option>
+                            <option value="13">Zumpano</option>
+                            <option value="14">Cagliari</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label col-lg-12" for="textinput">Orario selezionato</label>
+                    <div class="col-md-4 col-lg-12">
+                        <input id="txtOrario" name="txtOrario" type="text" placeholder="Seleziona orario"
+                            class="form-control input-md">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label col-lg-12" for="textinput">Sala riunione selezionata</label>
+                    <div class="col-md-4 col-lg-12">
+                        <input id="txtSala" name="txtSala" type="text" placeholder="Seleziona sala riunione"
+                            class="form-control input-md">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label col-lg-12" for="selectbasic">Altre sale disponibili</label>
+                    <div class="col-md-4 col-lg-12">
+                        <select id="selectbasic" name="selectbasic" class="form-control">
+                            <option value="1">CB G11a</option>
+                            <option value="2">CB G310a</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label class="col-md-4 control-label col-lg-12" for="singlebutton"></label>
+                    <div class="col-md-4 col-lg-12">
+                        <button id="verificaa" name="verificaa" class="btn btn-primary">Verifica</button>
+                    </div>
+                </div> -->
+
+            </form>
+
+            <button id="verifica" name="verifica" class="btn btn-primary">Verifica</button>
             
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 col-lg-12 control-label" for="textinput">Sede</label>  
-            <div class="col-md-4 col-lg-12">
-            <!-- <input id="tbSede" name="textinput" type="text" placeholder="sede" class="form-control input-md"> -->
-            <select id="tbSede" name="tbSede" class="form-control">
-              <option value="1">Roma</option>
-              <option value="2">Milano</option>
-              <option value="3">Torino</option>
-              <option value="4">Napoli</option>
-            </select>
-              
-            </div>
-          </div>
-          
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label col-lg-12" for="textinput">Orario selezionato</label>  
-            <div class="col-md-4 col-lg-12">
-            <input id="txOrario" name="textinput" type="text" placeholder="orario" class="form-control input-md">
-              
-            </div>
-          </div>
-          
-          
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label col-lg-12" for="textinput">Sala riunione selezionata</label>  
-            <div class="col-md-4 col-lg-12">
-            <input id="tbSala" name="tbSala" type="text" placeholder="sala" class="form-control input-md">
-              
-            </div>
-          </div>
-          
-          <!-- Select Basic -->
-          <div class="form-group">
-            <label class="col-md-4 control-label col-lg-12" for="selectbasic">Sale disponibili</label>
-            <div class="col-md-4 col-lg-12">
-              <select id="selectbasic" name="selectbasic" class="form-control">
-                <option value="1">CB G11a</option>
-                <option value="2">CB G310a</option>
-              </select>
-            </div>
-          </div>
-          
-          <!-- Button -->
-          <div class="form-group">
-            <label class="col-md-4 control-label col-lg-12" for="singlebutton"></label>
-            <div class="col-md-4 col-lg-12">
-              <button id="run3" name="singlebutton" class="btn btn-primary">Verifica</button>
-            </div>
-            <!-- <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-              <span class="ms-Button-label">Verifica</span>
-          </div> -->
-          </div>
-          
-  
-      </form>
+            <table id="tableAttendees" hidden class="table">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Disponibilità</th>
+                        <th scope="col">Partecipazione</th>
+                    </tr>
+                </thead>
+                <tbody id="rowsAttendees">
+                    <!-- 
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Giovanni</td>
+                        <td><img src="/assets/check.png" alt="Example" width="30" height="30"></td>
+                        <td>Obbligatorio</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Danilo</td>
+                        <td><img src="/assets/check.png" alt="Example" width="30" height="30"></td>
+                        <td>Obbligatorio</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Francesco</td>
+                        <td><img src="/assets/error.png" alt="Example" width="30" height="30"></td>
+                        <td>Obbligatorio</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Carmine</td>
+                        <td><img src="/assets/error.png" alt="Example" width="30" height="30"></td>
+                        <td>Facoltativo</td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+        </section>
 
-      <table class="table">
-        <thead class="table-primary">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Disponibilità</th>
-            <th scope="col">Partecipazione</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Giovanni</td>
-            <td><img src="/assets/check.png" alt="Example" width="30" height="30"></td>
-            <td>Obbligatorio</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Danilo</td>
-            <td><img src="/assets/check.png" alt="Example" width="30" height="30"></td>
-            <td>Obbligatorio</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Francesco</td>
-            <td><img src="/assets/error.png" alt="Example" width="30" height="30"></td>
-            <td>Obbligatorio</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Carmine</td>
-            <td><img src="/assets/error.png" alt="Example" width="30" height="30"></td>
-            <td>Facoltativo</td>
-          </tr>
-        </tbody>
-      </table>
-      
-    </section> 
-    
-    <main id="app-body" class="ms-welcome__main" style="display: flex;">
-
-
-
-              <!-- <h2 class="ms-font-xl"> Per favore inserisci sala riunione ed ospiti prima di verificare la Disponibilità. </h2> -->
-              <p><label id="item-subject"></label></p>
-              <p><label id="item-location"></label></p>
-              <p><label id="messagePerson"></label></p>
-              <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-                  <span class="ms-Button-label">Verifica</span>
-              </div> 
     </main>
+    <script type="text/javascript" src="taskpane.js"></script>
+    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../../node_modules/core-js/client/core.js"></script>
+    <script type="text/javascript"
+        src="../../node_modules/@microsoft/office-js-helpers/dist/office.helpers.js"></script>
 </body>
 
 </html>
